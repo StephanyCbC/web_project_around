@@ -1,0 +1,84 @@
+.element {
+  height: 361px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.element__picture {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: start;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.element__image {
+  width: 282px;
+  height: 282px;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  display: inline-block;
+}
+
+.element__button-trash {
+  background-color: transparent;
+  height: 18px;
+  width: 19px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 18px 15px auto auto;
+}
+
+.element__button-trash:hover {
+  opacity: 60%;
+}
+
+.element__info {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.element__text {
+  width: 246px;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0em;
+  text-align: center;
+  color: black;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.element__button-like {
+  background-color: transparent;
+  height: 19px;
+  width: 21px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.element__button-like:hover {
+  opacity: 60%;
+}
+
+@media screen and (max-width: 767px) {
+  .element__image {
+    display: flex;
+  }
+}

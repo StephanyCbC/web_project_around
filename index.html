@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ciudades, explorando" />
+    <meta
+      name="keywords"
+      content="Ciudades alrededor del mundo, tripleten, js"
+    />
+    <meta name="author" content="Stephany Cabrera" />
+    <title>Alrededor del mundo con tripleten</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body class="body">
+    <div class="page">
+      <header class="header">
+        <img
+          src="./images/logo.png"
+          alt="logo around the us"
+          class="header__logo"
+        />
+        <span class="header__divider"></span>
+      </header>
+      <main class="main">
+        <section class="profile">
+          <div class="profile__image">
+            <img
+              src="./images/Avatar.jpg"
+              alt="Jacques Cousteau, explorador"
+              class="profile__avatar"
+            />
+          </div>
+          <div class="profile__info">
+            <button class="profile__edit-button" id="editbutton"></button>
+            <p class="profile__text">Explorador</p>
+            <h1 class="profile__title">Jacques Cousteau</h1>
+          </div>
+          <button class="profile__add-button" id="addbutton"></button>
+        </section>
+        <section class="elements">
+          <div class="element">
+            <div class="element__overlay"></div>
+            <div class="element__picture">
+              <img
+                src="./images/la _merced_peru.jpg"
+                alt="la merced"
+                class="element__image"
+                id="torresdelpaine"
+              />
+              <img
+                src="./images/trash.svg"
+                alt="trash button"
+                class="element__button-trash"
+              />
+            </div>
+            <div class="element__info">
+              <p class="element__text">La Merced</p>
+              <img
+                src="./images/heart.svg"
+                alt="like button"
+                class="element__button-like"
+              />
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__picture">
+              <img
+                src="./images/Lago_Lomond_ United_Kingdom.jpg"
+                alt="lago lomond"
+                class="element__image"
+                id="lagogrey"
+              />
+              <img
+                src="./images/trash.svg"
+                alt="trash button"
+                class="element__button-trash"
+              />
+            </div>
+            <div class="element__info">
+              <p class="element__text">Lago Lomond</p>
+              <img
+                src="./images/heart.svg"
+                alt="like button"
+                class="element__button-like"
+              />
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__picture">
+              <img
+                src="./images/Lago_Braies_Italy.jpg"
+                alt="lago braies"
+                class="element__image"
+                id="lagopehoe"
+              />
+              <img
+                src="./images/trash.svg"
+                alt="trash button"
+                class="element__button-trash"
+              />
+            </div>
+            <div class="element__info">
+              <p class="element__text">Lago Braies</p>
+              <img
+                src="./images/heart.svg"
+                alt="like button"
+                class="element__button-like"
+              />
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__picture">
+              <img
+                src="./images/Grand_Teton_USA.jpg"
+                alt="Grand teton"
+                class="element__image"
+                id="puertonatales"
+              />
+              <img
+                src="./images/trash.svg"
+                alt="trash button"
+                class="element__button-trash"
+              />
+            </div>
+            <div class="element__info">
+              <p class="element__text">Grand Teton</p>
+              <img
+                src="./images/heart.svg"
+                alt="like button"
+                class="element__button-like"
+              />
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__picture">
+              <img
+                src="./images/Cataratas_del_Niagara_Canada.jpg"
+                alt="cataratas del niagara"
+                class="element__image"
+                id="lagunaamarga"
+              />
+              <img
+                src="./images/trash.svg"
+                alt="trash button"
+                class="element__button-trash"
+              />
+            </div>
+            <div class="element__info">
+              <p class="element__text">Cataratas del Niagara</p>
+              <img
+                src="./images/heart.svg"
+                alt="like button"
+                class="element__button-like"
+              />
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__picture">
+              <img
+                src="./images/Agios_Nikolaos_Greece.jpg"
+                alt="Agios nikolaos"
+                class="element__image"
+                id="lagunaserrano"
+              />
+              <img
+                src="./images/trash.svg"
+                alt="trashbutton"
+                class="element__button-trash"
+              />
+            </div>
+            <div class="element__info">
+              <p class="element__text">Agios Nikolaos</p>
+              <img
+                src="./images/heart.svg"
+                alt="like button"
+                class="element__button-like"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">&copy; 2024 Stephany Cabrera</footer>
+    </div>
+    <div class="popup popup_profile">
+      <div class="popup__overlay"></div>
+      <div class="popup__content">
+        <form id="popupaddprofile" class="popup__container">
+          <img
+            src="./images/Close_Icon.svg"
+            alt="Closeicon"
+            class="popup__close-icon"
+            id="closeicon"
+          />
+          <h2 class="popup__edit">Editar perfil</h2>
+          <input
+            type="text"
+            class="popup__input popup__input-name"
+            placeholder="Nombre"
+            value="Jacques Cousteau"
+          />
+          <input
+            type="text"
+            class="popup__input popup__input-about"
+            placeholder="Acerca de mi"
+            value="Explorador"
+          />
+          <button type="submit" class="popup__button">Guardar</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup_place">
+      <div class="popup__overlay"></div>
+      <div class="popup__content">
+        <form id="popupaddplace" class="popup__container">
+          <img
+            src="./images/Close_Icon.svg"
+            alt="Closeicon"
+            class="popup__close-icon"
+            id="closeiconplace"
+          />
+          <h2 class="popup__edit">Nuevo Lugar</h2>
+          <input
+            type="text"
+            class="popup__input popup__input-name"
+            placeholder="Titulo"
+          />
+          <input
+            type="text"
+            class="popup__input popup__input-about"
+            placeholder="Enlace a la imagen"
+          />
+          <button type="submit" class="popup__button">Crear</button>
+        </form>
+      </div>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
