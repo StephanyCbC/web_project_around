@@ -25,14 +25,18 @@
   width: 24px;
   height: 24px;
   grid-area: button;
-  margin-top: 17px;
-  margin-left: 15px;
   background-color: transparent;
   cursor: pointer;
+  margin-top: 17px;
+  margin-left: 15px;
   background-image: url(../images/lapiz.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.profile__edit-button:hover {
+  opacity: 60%;
 }
 
 .profile__text {
@@ -76,7 +80,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 880px) {
   .profile {
     display: flex;
     flex-direction: column;

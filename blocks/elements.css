@@ -1,11 +1,10 @@
 .elements {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 18px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 880px) {
   .elements {
     min-width: 282px;
     width: 100%;

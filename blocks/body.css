@@ -8,7 +8,7 @@
   
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 880px) {
   .body {
     margin: auto;
     display: flex;
