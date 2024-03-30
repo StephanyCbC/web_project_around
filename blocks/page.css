@@ -2,7 +2,7 @@
   width: 882px;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 767px) {
   .page {
     width: 320px;
     margin: 0;
