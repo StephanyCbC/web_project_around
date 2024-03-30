@@ -13,3 +13,4 @@ Este es el Link para ingreso:
 
 https://stephanycbc.github.io/web_project_around/
 
+Se añaden las tarjetas con javascript, se activan los formularios para agregar nuevas tarjetas, los Botones de like y de eliminar tarjetas ya funcionan.

@@ -15,12 +15,17 @@
 }
 
 @media screen and (max-width: 880px) {
+  .header {
+    min-width: 300px;
+  }
+
   .header__logo {
     display: block;
-    margin: auto;
+    margin: 30px;
   }
 
   .header__divider {
-    width: 320px;
+    width: 300px;
+    margin: auto;
   }
 }

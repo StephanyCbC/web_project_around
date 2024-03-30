@@ -25,18 +25,14 @@
   width: 24px;
   height: 24px;
   grid-area: button;
-  background-color: transparent;
-  cursor: pointer;
   margin-top: 17px;
   margin-left: 15px;
+  background-color: transparent;
+  cursor: pointer;
   background-image: url(../images/lapiz.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.profile__edit-button:hover {
-  opacity: 60%;
 }
 
 .profile__text {
@@ -101,7 +97,7 @@
 
   .profile__add-button {
     width: 260px;
-    margin: auto;
+    margin: 20px auto 0;
   }
 
   .profile__title {
@@ -117,5 +113,9 @@
     white-space: nowrap;
     overflow: hidden;
     max-width: 238px;
+  }
+
+  .profile__edit-button {
+    margin: 17px 0 0;
   }
 }
