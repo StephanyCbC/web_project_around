@@ -88,9 +88,9 @@
   .element__image {
     display: flex;
   }
-}
 
 .element__button-like {
   padding: 0;
   height: 17px;
+}
 }
