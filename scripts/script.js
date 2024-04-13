@@ -20,6 +20,8 @@ const deleteCard = document.querySelector(".element__button-trash");
 
 const imagePopup = document.querySelector("#image-popup");
 
+const popupOverlays = document.querySelectorAll(".popup__overlay");
+
 const initialCards = [
   {
     name: "La Merced",
@@ -47,21 +49,34 @@ const initialCards = [
   },
 ];
 
+function closeAllModal() {
+  popupProfile.classList.remove("popup_open");
+  popupPlace.classList.remove("popup_open");
+  imagePopup.classList.remove("popup_open");
+  document.removeEventListener("keydown", handleEscPress);
+}
+
+function handleEscPress(evt) {
+  if (evt.key === "Escape") {
+    closeAllModal();
+  }
+}
+
 openEditButton.addEventListener("click", function () {
   popupProfile.classList.add("popup_open");
+  document.addEventListener("keydown", handleEscPress);
 });
 
 openProfileButton.addEventListener("click", function () {
   popupPlace.classList.add("popup_open");
+  document.addEventListener("keydown", handleEscPress);
   aboutMeInput.value = profileText.textContent;
   nameInput.value = profileTitle.textContent;
 });
 
 popupCloseIcon.forEach((item) => {
   item.addEventListener("click", function () {
-    popupProfile.classList.remove("popup_open");
-    popupPlace.classList.remove("popup_open");
-    imagePopup.classList.remove("popup_open");
+    closeAllModal();
   });
 });
 
@@ -69,7 +84,7 @@ function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileText.textContent = aboutMeInput.value;
   profileTitle.textContent = nameInput.value;
-  popupProfile.classList.remove("popup_open");
+  closeAllModal();
 }
 
 formElement.addEventListener("submit", handleProfileFormSubmit);
@@ -78,7 +93,7 @@ function handleAddCard(evt) {
   evt.preventDefault();
   const cardNode = createCard(placeInput.value, linkInput.value);
   elementsArea.prepend(cardNode);
-  popupPlace.classList.remove("popup_open");
+  closeAllModal();
 
   placeInput.value = "";
   linkInput.value = "";
@@ -109,6 +124,7 @@ function createCard(name, link) {
 
   cardNode.querySelector(".element__image").addEventListener("click", () => {
     imagePopup.classList.add("popup_open");
+    document.addEventListener("keydown", handleEscPress);
     imagePopup.querySelector(".popup__image").src = link;
     imagePopup.querySelector(".popup__title").textContent = name;
     imagePopup.querySelector(".popup__image").alt = name;
@@ -120,4 +136,8 @@ function createCard(name, link) {
 initialCards.forEach((item) => {
   const cardNode = createCard(item.name, item.link);
   elementsArea.append(cardNode);
+});
+
+popupOverlays.forEach((overlay) => {
+  overlay.addEventListener("click", closeAllModal);
 });
