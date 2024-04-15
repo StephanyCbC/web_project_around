@@ -42,7 +42,7 @@
     <div class="popup popup_profile">
       <div class="popup__overlay"></div>
       <div class="popup__content">
-        <form id="popupaddprofile" class="popup__container">
+        <form id="popupaddprofile" class="popup__form">
           <button
             type="button"
             id="closeicon"
@@ -51,16 +51,26 @@
           <h2 class="popup__edit">Editar perfil</h2>
           <input
             type="text"
+            minlength="2"
+            maxlength="40"
             class="popup__input popup__input-name"
             placeholder="Nombre"
             value="Jacques Cousteau"
+            name="name"
+            required
           />
+          <span class="popup__error popup__error_type_name"></span>
           <input
             type="text"
+            minlength="2"
+            maxlength="200"
             class="popup__input popup__input-about"
             placeholder="Acerca de mi"
             value="Explorador"
+            name="about"
+            required
           />
+          <span class="popup__error popup__error_type_about"></span>
           <button type="submit" class="popup__button">Guardar</button>
         </form>
       </div>
@@ -68,7 +78,7 @@
     <div class="popup popup_place">
       <div class="popup__overlay"></div>
       <div class="popup__content">
-        <form id="popupaddplace" class="popup__container">
+        <form id="popupaddplace" class="popup__form">
           <button
             type="button"
             id="closeiconinfo"
@@ -77,14 +87,22 @@
           <h2 class="popup__edit">Nuevo Lugar</h2>
           <input
             type="text"
+            minlength="2"
+            maxlength="30"
             class="popup__input popup__input-place"
             placeholder="Titulo"
+            name="place"
+            required
           />
+          <span class="popup__error popup__error_type_place"></span>
           <input
-            type="text"
+            type="url"
             class="popup__input popup__input-link"
             placeholder="Enlace a la imagen"
+            name="link"
+            required
           />
+          <span class="popup__error popup__error_type_link"></span>
           <button type="submit" class="popup__button">Crear</button>
         </form>
       </div>
