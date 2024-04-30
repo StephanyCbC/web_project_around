@@ -1,4 +1,4 @@
-import Card from "../utils/card.js";
+import Card from "../utils/Card.js";
 
 export const openEditButton = document.querySelector("#editbutton");
 export const openProfileButton = document.querySelector("#addbutton");
@@ -75,7 +75,7 @@ export function handleEscPress(evt) {
 }
 
 export function createCard(name, link) {
-  return new Card(name, link).render();
+  return new Card(name, link, "#element-card").render();
 }
 
 export function handleAddCard(evt) {
